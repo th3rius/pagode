@@ -12,10 +12,11 @@
   flex-direction: column;
   align-items: center;
   padding: 4rem 0;
+  text-align: center;
 }
 
 .github {
-  align-items: flex-end;
+  justify-content: start;
   padding: 2rem;
   display: flex;
   gap: 1rem;
@@ -24,7 +25,15 @@
 
 /* Mobile */
 @media (max-width: 700px) {
+  .main {
+    padding: 4rem;
+  }
+
   .center {
     padding: 8rem 0 6rem;
+  }
+
+  .github {
+    justify-content: center;
   }
 }
