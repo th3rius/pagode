@@ -4,6 +4,10 @@ import countDaysInBetween from "@/dates/countDaysInBetween";
 import daysRemainingMessage from "@/dates/daysRemainingMessage";
 import GitHubButtonClient from "@/components/GitHubButtonClient";
 
+// This is a reserverd Vercel variable, see:
+// https://vercel.com/docs/projects/environment-variables/reserved-environment-variables
+process.env.TZ = "America/Sao_Paulo";
+
 export default function Home() {
   const today = new Date();
   const nextFifth = getNextFifthBusinessDay(today);
