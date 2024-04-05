@@ -34,7 +34,7 @@ export default function Home() {
       </div>
 
       <div className={styles.center}>
-        <h1>{nextFifth.toLocaleDateString()}</h1>
+        <h1>{nextFifth.toLocaleDateString("pt-BR")}</h1>
         <p>{daysRemainingMessage(daysRemaining)}</p>
       </div>
 
