@@ -39,7 +39,7 @@ export default function Home() {
       </div>
 
       {/* TODO: add an adsense banner herer */}
-      <div />
+      <div className={styles.banner} />
     </main>
   );
 }
