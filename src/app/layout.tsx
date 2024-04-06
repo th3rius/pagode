@@ -14,6 +14,10 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  // TZ is a reserved variable in Vercel, so we override it here
+  // see: https://vercel.com/docs/projects/environment-variables/reserved-environment-variables
+  process.env.TZ = "America/Sao_Paulo";
+
   return (
     <html lang="en">
       <body>
