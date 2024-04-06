@@ -16,7 +16,7 @@
 }
 
 .github {
-  justify-content: start;
+  justify-content: flex-start;
   padding: 2rem;
   display: flex;
   gap: 1rem;

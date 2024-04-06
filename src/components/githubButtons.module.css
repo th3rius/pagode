@@ -1,0 +1,55 @@
+.widget {
+  display: inline-block;
+  overflow: hidden;
+  font-size: 0;
+  line-height: 0;
+  white-space: nowrap;
+}
+
+.btn,
+.socialCount {
+  position: relative;
+  display: inline-block;
+  display: inline-flex;
+  height: 16px;
+  padding: 5px 10px;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 16px;
+  vertical-align: bottom;
+  cursor: pointer;
+  user-select: none;
+  background-repeat: repeat-x;
+  background-position: -1px -1px;
+  background-size: 110% 110%;
+  border: 1px solid;
+  box-sizing: content-box;
+}
+
+.btn {
+  border-radius: 0.25em;
+  color: var(--github-btn-color);
+  background-color: var(--github-btn-background-color);
+  border-color: var(--github-btn-border-color);
+}
+
+.btn:not(:last-child) {
+  border-radius: 0.25em 0 0 0.25em;
+}
+
+.btn:hover {
+  background-color: var(--github-btn-hover-background-color);
+  border-color: var(--github-btn-hover-border-color);
+}
+
+.socialCount {
+  border-left: 0;
+  border-radius: 0 0.25em 0.25em 0;
+  color: var(--github-social-count-color);
+  background-color: var(--github-social-count-background-color);
+  border-color: var(--github-social-count-background-color);
+}
+
+.socialCount:hover {
+  color: var(--github-social-count-hover-color);
+}

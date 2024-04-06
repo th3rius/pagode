@@ -2,7 +2,8 @@ import styles from "./page.module.css";
 import { getNextFifthBusinessDay } from "@/dates/payday";
 import countDaysInBetween from "@/dates/countDaysInBetween";
 import daysRemainingMessage from "@/dates/daysRemainingMessage";
-import GitHubButtonClient from "@/components/GitHubButtonClient";
+import GitHubStarButton from "@/components/GitHubStarButton";
+import GitHubFollowButton from "@/components/GitHubFollowButton";
 
 export default function Home() {
   const today = new Date();
@@ -12,24 +13,8 @@ export default function Home() {
   return (
     <main className={styles.main}>
       <div className={styles.github}>
-        <GitHubButtonClient
-          href="https://github.com/th3rius/pagode"
-          data-color-scheme="no-preference: light; light: light; dark: dark;"
-          data-icon="octicon-star"
-          data-size="large"
-          data-show-count="true"
-          aria-label="Favoritar th3rius/pagode em GitHub"
-        >
-          Favoritar
-        </GitHubButtonClient>
-        <GitHubButtonClient
-          href="https://github.com/th3rius"
-          data-color-scheme="no-preference: light; light: light; dark: dark;"
-          data-size="large"
-          aria-label="Seguir @th3rius em GitHub"
-        >
-          Seguir @th3rius
-        </GitHubButtonClient>
+        <GitHubStarButton />
+        <GitHubFollowButton />
       </div>
 
       <div className={styles.center}>

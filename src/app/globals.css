@@ -2,13 +2,15 @@
   --font-sans: "Iosevka Aile", sans-serif;
   --foreground: #222831;
   --background: #ffd369;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground: #eeeeee;
-    --background: #393e46;
-  }
+  --github-btn-color: #24292f;
+  --github-btn-background-color: #ebf0f4;
+  --github-btn-hover-background-color: #e9ebef;
+  --github-btn-border-color: rgba(31, 35, 40, 0.15);
+  --github-btn-hover-border-color: rgba(31, 35, 40, 0.15);
+  --github-social-count-color: #24292f;
+  --github-social-count-hover-color: #2f81f7;
+  --github-social-count-background-color: #fff;
+  --github-social-count-border-color: rgba(31, 35, 40, 0.15);
 }
 
 * {
@@ -35,6 +37,19 @@ a {
 }
 
 @media (prefers-color-scheme: dark) {
+  :root {
+    --foreground: #eeeeee;
+    --background: #393e46;
+    --github-btn-color: #c9d1d9;
+    --github-btn-background-color: #1a1e23;
+    --github-btn-hover-background-color: #292e33;
+    --github-btn-border-color: rgba(240, 246, 252, 0.1);
+    --github-btn-hover-border-color: #8b949e;
+    --github-social-count-color: #c9d1d9;
+    --github-social-count-background-color: #0d1117;
+    --github-social-count-border-color: rgba(240, 246, 252, 0.1);
+  }
+
   html {
     color-scheme: dark;
   }
