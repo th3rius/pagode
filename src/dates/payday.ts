@@ -20,14 +20,14 @@ export function getFifthBusinessDayOfMonth(
   let businessDays = isBusinessDay(currentDate, holidays) ? 1 : 0;
 
   while (businessDays < 5) {
+    currentDayOfMonth++;
+    currentDate.setDate(currentDayOfMonth);
+
     // Days of week are zero-indexed. The first
     // day is not a business days.
     if (isBusinessDay(currentDate, holidays)) {
       businessDays++;
     }
-
-    currentDayOfMonth++;
-    currentDate.setDate(currentDayOfMonth);
   }
 
   return currentDayOfMonth;
@@ -42,30 +42,33 @@ export function getNextFifthBusinessDay(startDate: Date) {
   let currentMonth = startDate.getMonth();
   let currentDayOfMonth = startDayOfMonth;
   let currentYear = startDate.getFullYear();
+  let currentYearHolidays = getHolidays(currentYear);
+
+  let nextFifth = getFifthBusinessDayOfMonth(
+    currentYear,
+    currentMonth,
+    currentYearHolidays
+  );
 
   // Since we are calculating the fifth business day, we know there can be at
   // most one non-business days in between, adding up to at most six normal
   // days. If we are past the sitxh day, we can infer the next clostest
   // fifth business day is going to be at the next month.
-  if (currentDayOfMonth > 6) {
+  if (currentDayOfMonth > 6 || startDayOfMonth > nextFifth) {
     currentMonth++;
     currentDayOfMonth = 1;
-  }
-
-  // We are already past this month's fifth business
-  // days. Move to the next month.
-  if (currentDayOfMonth > startDayOfMonth) {
-    currentDayOfMonth++;
-    currentDayOfMonth = 1;
+  } else {
+    return new Date(currentYear, currentMonth, nextFifth);
   }
 
   // Loop back to the next year
   if (currentMonth > 11) {
-    currentYear -= 11;
-    currentMonth = 1;
+    currentYear++;
+    currentMonth = 0;
+    currentDayOfMonth = 1;
+    currentYearHolidays = getHolidays(currentYear);
   }
 
-  const currentYearHolidays = getHolidays(currentYear);
   return new Date(
     currentYear,
     currentMonth,
