@@ -4,7 +4,6 @@ import getHolidays, { Holidays } from "./getHolidays";
  * Checks if a day of the week is a business day.
  */
 function isBusinessDay(date: Date, holidays: Holidays) {
-  console.log(date.toLocaleDateString());
   return date.getDay() !== 0 && !holidays.has(date.toLocaleDateString());
 }
 
@@ -24,8 +23,8 @@ export function getFifthBusinessDayOfMonth(
     currentDayOfMonth++;
     currentDate.setDate(currentDayOfMonth);
 
-    // Days of week are zero-indexed. The first
-    // day is not a business days.
+    // Days of week are zero-indexed. Sundays
+    // and holidays are not business days.
     if (isBusinessDay(currentDate, holidays)) {
       businessDays++;
     }
@@ -41,7 +40,6 @@ export function getNextFifthBusinessDay(startDate: Date) {
   const startDayOfMonth = startDate.getDate();
 
   let currentMonth = startDate.getMonth();
-  let currentDayOfMonth = startDayOfMonth;
   let currentYear = startDate.getFullYear();
   let currentYearHolidays = getHolidays(currentYear);
 
@@ -51,13 +49,9 @@ export function getNextFifthBusinessDay(startDate: Date) {
     currentYearHolidays
   );
 
-  // Since we are calculating the fifth business day, we know there can be at
-  // most one non-business days in between, adding up to at most six normal
-  // days. If we are past the sitxh day, we can infer the next clostest
-  // fifth business day is going to be at the next month.
-  if (currentDayOfMonth > 6 || startDayOfMonth > nextFifth) {
+  // We are already past this month's fifth business day, go to the next month.
+  if (startDayOfMonth > nextFifth) {
     currentMonth++;
-    currentDayOfMonth = 1;
   } else {
     return new Date(currentYear, currentMonth, nextFifth);
   }
@@ -66,7 +60,6 @@ export function getNextFifthBusinessDay(startDate: Date) {
   if (currentMonth > 11) {
     currentYear++;
     currentMonth = 0;
-    currentDayOfMonth = 1;
     currentYearHolidays = getHolidays(currentYear);
   }
 
