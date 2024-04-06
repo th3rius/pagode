@@ -22,14 +22,14 @@ export default function Home() {
         >
           Favoritar
         </GitHubButtonClient>
+
         <GitHubButtonClient
-          href="https://github.com/sponsors/th3rius"
+          href="https://github.com/th3rius"
           data-color-scheme="no-preference: light; light: light; dark: dark;"
-          data-icon="octicon-heart"
           data-size="large"
-          aria-label="Patrocinar @th3rius on GitHub"
+          aria-label="Seguir @th3rius em GitHub"
         >
-          Patrocinar
+          Seguir @th3rius
         </GitHubButtonClient>
       </div>
 
