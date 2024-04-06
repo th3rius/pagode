@@ -24,7 +24,7 @@ export default async function GitHubStarButton() {
         </a>
         <a
           className={styles.socialCount}
-          href="https://github.com/th3rius/pagode"
+          href={repo.stargazers_url}
           rel="noopener"
           target="_blank"
           aria-label={`${repo.stargazers_count} favoritos em GitHub`}

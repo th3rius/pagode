@@ -2,6 +2,7 @@
   --font-sans: "Iosevka Aile", sans-serif;
   --foreground: #222831;
   --background: #ffd369;
+  /* GitHub Buttons */
   --github-btn-color: #24292f;
   --github-btn-background-color: #ebf0f4;
   --github-btn-hover-background-color: #e9ebef;
@@ -40,6 +41,7 @@ a {
   :root {
     --foreground: #eeeeee;
     --background: #393e46;
+    /* GitHub Buttons */
     --github-btn-color: #c9d1d9;
     --github-btn-background-color: #1a1e23;
     --github-btn-hover-background-color: #292e33;
