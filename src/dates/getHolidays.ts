@@ -60,23 +60,23 @@ export function getEasterHolidays(year: number) {
  */
 export function getNationalHolidays(year: number) {
   const fixedHolidays = [
-    [1, 1], // Confraternização mundial
-    [4, 21], // Tiradentes
-    [5, 1], // Dia do trabalho
-    [9, 7], // Independência do Brasil
-    [10, 12], // Nossa Senhora Aparecida
-    [11, 2], // Finados
-    [11, 15], // Proclamação da República
-    [12, 25], // Natal
+    [0, 1], // Confraternização mundial
+    [3, 21], // Tiradentes
+    [4, 1], // Dia do trabalho
+    [8, 7], // Independência do Brasil
+    [9, 12], // Nossa Senhora Aparecida
+    [10, 2], // Finados
+    [10, 15], // Proclamação da República
+    [11, 25], // Natal
   ];
   return fixedHolidays.map(([month, day]) => new Date(year, month, day));
 }
 
-export type Holidays = Set<number>;
+export type Holidays = Set<string>;
 
 export default function getHolidays(year: number) {
   const easterHolidays = getEasterHolidays(year);
   const nationalHolidays = getNationalHolidays(year);
   const holidays = [...easterHolidays, ...nationalHolidays];
-  return new Set(holidays.map((date) => date.getTime()));
+  return new Set(holidays.map((date) => date.toLocaleDateString()));
 }

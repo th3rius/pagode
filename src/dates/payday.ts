@@ -4,7 +4,8 @@ import getHolidays, { Holidays } from "./getHolidays";
  * Checks if a day of the week is a business day.
  */
 function isBusinessDay(date: Date, holidays: Holidays) {
-  return date.getDay() !== 0 && !holidays.has(date.getTime());
+  console.log(date.toLocaleDateString());
+  return date.getDay() !== 0 && !holidays.has(date.toLocaleDateString());
 }
 
 /**

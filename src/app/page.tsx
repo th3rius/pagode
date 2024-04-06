@@ -22,7 +22,6 @@ export default function Home() {
         >
           Favoritar
         </GitHubButtonClient>
-
         <GitHubButtonClient
           href="https://github.com/th3rius"
           data-color-scheme="no-preference: light; light: light; dark: dark;"
