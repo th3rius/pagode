@@ -1,10 +1,11 @@
 import getHolidays, { Holidays } from "./getHolidays";
+import { DateTime } from "luxon";
 
 /**
  * Checks if a day of the week is a business day.
  */
-function isBusinessDay(date: Date, holidays: Holidays) {
-  return date.getDay() !== 0 && !holidays.has(date.toLocaleDateString());
+function isBusinessDay(date: DateTime, holidays: Holidays) {
+  return date.weekday !== 7 && !holidays.has(date.toLocaleString());
 }
 
 /**
@@ -15,13 +16,11 @@ export function getFifthBusinessDayOfMonth(
   month: number,
   holidays: Holidays
 ) {
-  const currentDate = new Date(year, month);
-  let currentDayOfMonth = currentDate.getDate();
+  let currentDate = DateTime.local(year, month);
   let businessDays = isBusinessDay(currentDate, holidays) ? 1 : 0;
 
   while (businessDays < 5) {
-    currentDayOfMonth++;
-    currentDate.setDate(currentDayOfMonth);
+    currentDate = currentDate.plus({ day: 1 });
 
     // Days of week are zero-indexed. Sundays
     // and holidays are not business days.
@@ -30,17 +29,17 @@ export function getFifthBusinessDayOfMonth(
     }
   }
 
-  return currentDayOfMonth;
+  return currentDate.day;
 }
 
 /**
  * Calculates the closest fifth business day of a date.
  */
-export function getNextFifthBusinessDay(startDate: Date) {
-  const startDayOfMonth = startDate.getDate();
+export function getNextFifthBusinessDay(startDate: DateTime) {
+  const startDayOfMonth = startDate.day;
 
-  let currentMonth = startDate.getMonth();
-  let currentYear = startDate.getFullYear();
+  let currentMonth = startDate.month;
+  let currentYear = startDate.year;
   let currentYearHolidays = getHolidays(currentYear);
 
   let nextFifth = getFifthBusinessDayOfMonth(
@@ -53,17 +52,17 @@ export function getNextFifthBusinessDay(startDate: Date) {
   if (startDayOfMonth > nextFifth) {
     currentMonth++;
   } else {
-    return new Date(currentYear, currentMonth, nextFifth);
+    return DateTime.local(currentYear, currentMonth, nextFifth);
   }
 
   // Loop back to the next year
-  if (currentMonth > 11) {
+  if (currentMonth > 12) {
     currentYear++;
-    currentMonth = 0;
+    currentMonth = 1;
     currentYearHolidays = getHolidays(currentYear);
   }
 
-  return new Date(
+  return DateTime.local(
     currentYear,
     currentMonth,
     getFifthBusinessDayOfMonth(currentYear, currentMonth, currentYearHolidays)

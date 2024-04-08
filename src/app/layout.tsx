@@ -2,6 +2,10 @@ import type { Metadata } from "next";
 import { Analytics } from "@vercel/analytics/react";
 import "@fontsource/iosevka-aile";
 import "./globals.css";
+import { Settings } from "luxon";
+
+Settings.defaultLocale = "pt-BR";
+Settings.defaultZone = "America/Sao_Paulo";
 
 export const metadata: Metadata = {
   title: "Quando é o próximo quinto dia útil? - Pagode",

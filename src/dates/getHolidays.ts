@@ -1,3 +1,5 @@
+import { Settings } from "luxon";
+
 /**
  * Pascal full moon dates
  * @see {@link https://en.wikipedia.org/wiki/Paschal_full_moon Paschal full moon}
@@ -75,8 +77,9 @@ export function getNationalHolidays(year: number) {
 export type Holidays = Set<string>;
 
 export default function getHolidays(year: number) {
+  const lc = Settings.defaultLocale;
   const easterHolidays = getEasterHolidays(year);
   const nationalHolidays = getNationalHolidays(year);
   const holidays = [...easterHolidays, ...nationalHolidays];
-  return new Set(holidays.map((date) => date.toLocaleDateString()));
+  return new Set(holidays.map((date) => date.toLocaleDateString(lc)));
 }
