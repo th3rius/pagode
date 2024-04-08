@@ -4,10 +4,9 @@ import countDaysInBetween from "@/dates/countDaysInBetween";
 import daysRemainingMessage from "@/dates/daysRemainingMessage";
 import GitHubStarButton from "@/components/GitHubStarButton";
 import GitHubFollowButton from "@/components/GitHubFollowButton";
-import { toZonedTime } from "date-fns-tz";
 
 export default function Home() {
-  const today = toZonedTime(new Date(), "America/Sao_Paulo");
+  const today = new Date();
   const nextFifth = getNextFifthBusinessDay(today);
   const daysRemaining = countDaysInBetween(today, nextFifth);
 
