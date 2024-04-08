@@ -4,11 +4,12 @@ import daysRemainingMessage from "@/dates/daysRemainingMessage";
 import GitHubStarButton from "@/components/GitHubStarButton";
 import GitHubFollowButton from "@/components/GitHubFollowButton";
 import { DateTime } from "luxon";
+import diffDaysInBetween from "../dates/diffDaysInBetween";
 
 export default function Home() {
   const today = DateTime.local();
   const nextFifth = getNextFifthBusinessDay(today);
-  const daysRemaining = Math.ceil(nextFifth.diff(today, "days").days);
+  const daysRemaining = diffDaysInBetween(nextFifth, today);
 
   return (
     <main className={styles.main}>
