@@ -21,7 +21,12 @@ export default function Home() {
       </div>
 
       <div className={styles.center}>
-        <h1>{nextFifth.toLocaleString()}</h1>
+        <div>
+          <span>
+            <h1 className={styles.title}>{nextFifth.toLocaleString()}</h1>,{" "}
+          </span>
+          <span>{nextFifth.weekdayLong}</span>
+        </div>
         <p>{daysRemainingMessage(daysRemaining)}</p>
       </div>
 
