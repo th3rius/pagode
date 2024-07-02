@@ -6,7 +6,7 @@ import GitHubFollowButton from "@/components/GitHubFollowButton";
 import { DateTime } from "luxon";
 import diffDaysInBetween from "@/dates/diffDaysInBetween";
 
-export const dynamic = "force-dynamic";
+export const revalidate = 60;
 
 export default function Home() {
   const today = DateTime.local();
