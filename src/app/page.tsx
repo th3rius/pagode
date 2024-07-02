@@ -1,6 +1,6 @@
 import styles from "./page.module.css";
 import { getNextFifthBusinessDay } from "@/dates/payday";
-import daysRemainingMessage from "@/dates/daysRemainingMessage";
+import DaysRemainingMessage from "@/components/DaysRemainingMessage";
 import GitHubStarButton from "@/components/GitHubStarButton";
 import GitHubFollowButton from "@/components/GitHubFollowButton";
 import { DateTime } from "luxon";
@@ -27,7 +27,9 @@ export default function Home() {
           </span>
           <span>{nextFifth.weekdayLong}</span>
         </div>
-        <p>{daysRemainingMessage(daysRemaining)}</p>
+        <p>
+          <DaysRemainingMessage days={daysRemaining} />
+        </p>
       </div>
 
       {/* TODO: add an adsense banner herer */}
