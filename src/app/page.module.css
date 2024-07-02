@@ -1,9 +1,11 @@
 .main {
+  --main-spacing: 4rem;
+  --github-spacing: 2rem;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  padding: 6rem;
+  padding: var(--main-spacing);
   min-height: 100dvh;
 }
 
@@ -11,7 +13,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 4rem 0;
+  padding: 8rem 0 6rem;
   text-align: center;
   gap: 8px;
 }
@@ -21,11 +23,13 @@
 }
 
 .github {
-  justify-content: flex-start;
-  padding: 2rem;
+  padding: calc(var(--main-spacing) + var(--github-spacing));
   display: flex;
   gap: 1rem;
   width: 100%;
+  position: absolute;
+  justify-content: center;
+  top: 0;
 }
 
 .banner {
@@ -33,16 +37,16 @@
 }
 
 /* Mobile */
-@media (max-width: 700px) {
+@media (min-width: 768px) {
   .main {
-    padding: 4rem;
+    --main-spacing: 6rem;
   }
 
   .center {
-    padding: 8rem 0 6rem;
+    padding: 4rem 0;
   }
 
   .github {
-    justify-content: center;
+    justify-content: flex-start;
   }
 }

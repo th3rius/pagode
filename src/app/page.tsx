@@ -31,9 +31,6 @@ export default function Home() {
           <DaysRemainingMessage days={daysRemaining} />
         </p>
       </div>
-
-      {/* TODO: add an adsense banner herer */}
-      <div className={styles.banner} />
     </main>
   );
 }
