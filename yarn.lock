@@ -166,14 +166,14 @@
   integrity sha512-+1VkjdD0QBLPodGrJUeqarH8VAIvQODIbwh9XpP5Syisf7YoQgsJKPNFoqqLQlu+VQ/tVSshMR6loPMn8U+dPg==
 
 "@primer/octicons-react@^19.9.0":
-  version "19.9.0"
-  resolved "https://registry.yarnpkg.com/@primer/octicons-react/-/octicons-react-19.9.0.tgz#eb90a9b47da924c0ab33055d050e6ea21104d219"
-  integrity sha512-Uk4XrHyfylyfzZN9d8VFjF8FpfYHEyT4sabw+9+oP+GWAJHhPvNPTz6gXvUzJZmoblAvgcTrDslIPjz8zMh76w==
+  version "19.11.0"
+  resolved "https://registry.yarnpkg.com/@primer/octicons-react/-/octicons-react-19.11.0.tgz#011d2c18c32d8bf4c1628a7b6ed2c48872fe7efe"
+  integrity sha512-8PpCz7cpYY2GCGnJ/G9UARh9PH4C290l31YjriQHZ+WsagE37ntKXhFwq+s4OWoRqZ7fA7HeU81zGDFHQi0VKg==
 
 "@rushstack/eslint-patch@^1.3.3":
-  version "1.10.1"
-  resolved "https://registry.yarnpkg.com/@rushstack/eslint-patch/-/eslint-patch-1.10.1.tgz#7ca168b6937818e9a74b47ac4e2112b2e1a024cf"
-  integrity sha512-S3Kq8e7LqxkA9s7HKLqXGTGck1uwis5vAXan3FnU5yw1Ec5hsSGnq4s/UCaSqABPOnOTg7zASLyst7+ohgWexg==
+  version "1.10.4"
+  resolved "https://registry.yarnpkg.com/@rushstack/eslint-patch/-/eslint-patch-1.10.4.tgz#427d5549943a9c6fce808e39ea64dbe60d4047f1"
+  integrity sha512-WJgX9nzTqknM393q1QJDJmoW28kUfEnybeTfVNcNAPnIx210RXm2DiXiHzfNPJNIUUb1tJnz/l4QGtJ30PgWmA==
 
 "@swc/helpers@0.5.2":
   version "0.5.2"
@@ -270,10 +270,10 @@
   resolved "https://registry.yarnpkg.com/@ungap/structured-clone/-/structured-clone-1.2.0.tgz#756641adb587851b5ccb3e095daf27ae581c8406"
   integrity sha512-zuVdFrMJiuCDQUMCzQaD6KL28MjnqqN8XnAqiEq9PNm/hCPTSGfrXCOfwj1ow4LFb/tNymJPwsNbVePc1xFqrQ==
 
-"@vercel/analytics@^1.2.2":
-  version "1.2.2"
-  resolved "https://registry.yarnpkg.com/@vercel/analytics/-/analytics-1.2.2.tgz#715d8f203a170c06ba36b363e03b048c03060d5d"
-  integrity sha512-X0rctVWkQV1e5Y300ehVNqpOfSOufo7ieA5PIdna8yX/U7Vjz0GFsGf4qvAhxV02uQ2CVt7GYcrFfddXXK2Y4A==
+"@vercel/analytics@^1.3.1":
+  version "1.3.1"
+  resolved "https://registry.yarnpkg.com/@vercel/analytics/-/analytics-1.3.1.tgz#e2b1deac1b5d14fa2e4fe36186ac5054c6385ae4"
+  integrity sha512-xhSlYgAuJ6Q4WQGkzYTLmXwhYl39sWjoMA3nHxfkvG+WdBT25c563a7QhwwKivEOZtPJXifYHR1m2ihoisbWyA==
   dependencies:
     server-only "^0.0.1"
 
