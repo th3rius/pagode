@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Analytics } from "@vercel/analytics/react";
 import "@fontsource/iosevka-aile";
+import "@fontsource/iosevka-aile/700.css";
 import "./globals.css";
 import { Settings } from "luxon";
 
