@@ -47,9 +47,9 @@
   integrity sha512-Ys+3g2TaW7gADOJzPt83SJtCDhMjndcDMFVQ/Tj9iA1BfJzFKD9mAUXT3OenpuPHbI6P/myECxRJrofUsDx/5g==
 
 "@fontsource/iosevka-aile@^5.0.7":
-  version "5.0.11"
-  resolved "https://registry.yarnpkg.com/@fontsource/iosevka-aile/-/iosevka-aile-5.0.11.tgz#03f4626e38304720d68468749932dc899b6af789"
-  integrity sha512-uK87Z0bhEwoegWw5OWMGHkyXCQfB5Y1oA9lH1c25S0AaMBSWxMGRQG5X6q6VYPlTk+/+/QrQQkPRoF05RGYIgQ==
+  version "5.1.0"
+  resolved "https://registry.yarnpkg.com/@fontsource/iosevka-aile/-/iosevka-aile-5.1.0.tgz#1e0ffb052d12ef6cf9c76e64ebaf0712552e92db"
+  integrity sha512-gAdak8u5PIrZkE+s62tfm1tEHSusjdB4lEdGRToyVyEGqc1RZD+XmdTu5c4eH/P0JzPKf0+ooyoVifVyIZkhGw==
 
 "@humanwhocodes/config-array@^0.11.14":
   version "0.11.14"

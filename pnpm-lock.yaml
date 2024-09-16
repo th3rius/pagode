@@ -10,7 +10,7 @@ importers:
     dependencies:
       '@fontsource/iosevka-aile':
         specifier: ^5.0.7
-        version: 5.0.11
+        version: 5.1.0
       '@primer/octicons-react':
         specifier: ^19.9.0
         version: 19.11.0(react@18.3.1)
@@ -72,8 +72,8 @@ packages:
     resolution: {integrity: sha512-Ys+3g2TaW7gADOJzPt83SJtCDhMjndcDMFVQ/Tj9iA1BfJzFKD9mAUXT3OenpuPHbI6P/myECxRJrofUsDx/5g==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
 
-  '@fontsource/iosevka-aile@5.0.11':
-    resolution: {integrity: sha512-uK87Z0bhEwoegWw5OWMGHkyXCQfB5Y1oA9lH1c25S0AaMBSWxMGRQG5X6q6VYPlTk+/+/QrQQkPRoF05RGYIgQ==}
+  '@fontsource/iosevka-aile@5.1.0':
+    resolution: {integrity: sha512-gAdak8u5PIrZkE+s62tfm1tEHSusjdB4lEdGRToyVyEGqc1RZD+XmdTu5c4eH/P0JzPKf0+ooyoVifVyIZkhGw==}
 
   '@humanwhocodes/config-array@0.11.14':
     resolution: {integrity: sha512-3T8LkOmg45BV5FICb15QQMsyUSWrQ8AygVfC7ZG32zOalnqrilm018ZVCw0eapXux8FtA33q8PSRSstjee3jSg==}
@@ -1390,7 +1390,7 @@ snapshots:
 
   '@eslint/js@8.57.0': {}
 
-  '@fontsource/iosevka-aile@5.0.11': {}
+  '@fontsource/iosevka-aile@5.1.0': {}
 
   '@humanwhocodes/config-array@0.11.14':
     dependencies:
