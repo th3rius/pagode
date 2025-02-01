@@ -1,0 +1,25 @@
+{
+  "name": "pagode",
+  "version": "1.0.0",
+  "description": "Prints the next fifth business day.",
+  "bin": "./dist/cli.js",
+  "scripts": {
+    "build": "pkgroll --minify"
+  },
+  "keywords": [
+    "date"
+  ],
+  "author": "Gabriel de Oliveira <gabrielhk3@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@types/luxon": "^3.4.2",
+    "luxon": "^3.5.0"
+  },
+  "devDependencies": {
+    "@tsconfig/node-lts": "^22.0.1",
+    "@tsconfig/strictest": "^2.0.5",
+    "@types/node": "^22.13.0",
+    "pkgroll": "^2.6.1",
+    "tsx": "^4.19.2"
+  }
+}
