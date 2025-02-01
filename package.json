@@ -21,5 +21,13 @@
     "@types/node": "^22.13.0",
     "pkgroll": "^2.6.1",
     "tsx": "^4.19.2"
+  },
+  "homepage": "https://github.com/th3rius/pagode",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/th3rius/pagode.git"
+  },
+  "bugs": {
+    "url": "https://github.com/th3rius/pagode/issues"
   }
 }
